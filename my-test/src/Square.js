@@ -1,14 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class Square extends Component {
-    render() {
-        return (
-            <button className="square" onClick={this.props.addIcon}>
-                {this.props.value}
-            </button>
-        )
-        
-    };
-} 
+	onClickAdd() {
+		const { idx, addIcon } = this.props;
+		addIcon(idx);
+	}
+
+	render() {
+		const { value } = this.props;
+		
+		return (
+			<div className="Square" onClick={this.onClickAdd.bind(this)}>
+				<p className="Square-content">{value}</p>
+				
+			</div>
+		)
+	}
+}
 
 export default Square;

@@ -17,8 +17,13 @@
 .App-intro {
   font-size: large;
 }
-.square {
-  border-radius: 0%;
+.Square {
+  height: 50px;
+  width: 50px;
+  background-color: aquamarine;
+  display: inline-block;
+  border-style: solid;
+  text-align: center;
 }
 
 @keyframes App-logo-spin {
