@@ -20,7 +20,6 @@ class Clock extends Component {
             </div>
         )
     }
-
 }
 
 export default Clock;
