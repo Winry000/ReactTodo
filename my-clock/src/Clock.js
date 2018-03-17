@@ -19,7 +19,10 @@ class Clock extends Component {
                 {this.state.date.toLocaleTimeString()}
             </div>
         )
-    }
+    };
+   componentWilUnmount() {
+       clearInterval(this.timer)
+   }
 }
 
 export default Clock;
