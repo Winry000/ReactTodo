@@ -21,6 +21,7 @@ class App extends Component {
   render() {
     return (
       <div className='wrapper'>
+        <h2>Comment Component</h2>
         <CommentInput onSubmit={this.handleSubmitComment.bind(this)}/>
         <CommenList comments={this.state.comments}/>
       </div>

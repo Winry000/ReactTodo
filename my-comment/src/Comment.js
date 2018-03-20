@@ -5,9 +5,10 @@ class Comment extends Component{
         return(
             <div className="comment">
                 <div className="comment-user">
-                    <span>{this.props.content.username}</span>
+                    <span>{this.props.content.username} : </span>
+                    <span>{this.props.content.comment}</span>
                 </div>
-                <p>{this.props.content.comment}</p>
+                
             </div>
         )
     }

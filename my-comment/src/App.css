@@ -1,10 +1,20 @@
 .wrapper {
-  margin: 10px 20px;
+  margin-left: -250px;
   width: 500px;
   font-size: 14px;
-  background-color: grey;
+  background-color: silver;
   padding: 20px;
+  position: absolute;
+  left:50%
+
 };
-.comment-user {
-  color: skyblue;
+
+.comment-input {
+  background-color: blue;
+};
+
+div.comment-user {
+  background: skyblue;
+  height: 50px;
+  border: 0.1em solid;
 }
