@@ -28,9 +28,21 @@
 }
 .comment-card {
   padding: 20px;
-  width: 180px;
-  background-color: #F5F3BB
+  width: 140px;
+  background-color: #F5F3BB;
+  display: inline-block;
 }
+.button-left{
+  padding: 20px 10px;
+  background-color: #BA6E6E;
+  border-color: black;
+}
+.button-right{
+  padding: 20px 10px;
+  background-color: #BA6E6E;
+  border-color: black;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

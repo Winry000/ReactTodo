@@ -7,8 +7,7 @@ class Card extends Component {
 	constructor() {
 		super();
 		this.state = {
-			list:[],
-			ele:''
+			ele:'',
 		}
 	};
 
@@ -18,25 +17,31 @@ class Card extends Component {
 		})
 	};
 
-	onClickSubmit() {
-		const { list, ele } = this.state;
-		list.push(ele);
-		console.log(list)
+	handleSubmit() {
+		const { ele } = this.state;
+		const id = this.props.id;
+		this.props.onClickSubmit(id, ele);
 		this.setState({
 			ele: ''
 		})
-	}
+	};
 
+	
 	render() {
 		return (
 			<div>
 				<p className='title-name' style={{backgroundColor: this.props.color}}>{this.props.name}</p>
-				{this.state.list.map((content, i) => (
-						<Element  key={i} content={content}/>
+				{this.props.mlist.map((content, i) => (
+						<Element  key={i} 
+						content={content}
+						id={this.props.id}
+						onClickLeft={this.props.onClickLeft}
+						onClickRight={this.props.onClickRight}
+						/>
 				))}
 				<input ref={(input) => this.input = input}
 				onChange={this.onInputChange.bind(this)}/>
-				<button onClick={this.onClickSubmit.bind(this)}>Add</button>
+				<button onClick={this.handleSubmit.bind(this)}>Add</button>
 			</div>
 		);
 	}
